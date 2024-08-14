@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./airoplane.png" alt="TravelBloom Logo" />
+        <span>TravelBloom</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+        <li>
+          <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+        </li>
+      </ul>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter destination" />
+        <button class="search-btn" onclick="searchData()">Search</button>
+        <button class="clear-btn" onclick="clearSearchResults()">Clear</button>
+      </div>
+    </nav>
+
+    <div class="results" id="resultsContainer"></div>
+
+    <section id="home" class="active content">
+      <h1>EXPLORE <br />DREAM <br />DESTINATION</h1>
+      <p>
+        It encourages exploration of unfamiliar territories, embracing diverse
+        cultures and landscapes, while pursuing the desired destination that
+        captivates the heart and ignites a sense of wonder.
+      </p>
+      <button class="cta-btn">Book Now</button>
+    </section>
+
+    <section id="about">
+      <h1>ABOUT US</h1>
+      <p>
+        Welcome to Our Company! We are a team of passionate individuals
+        dedicated to providing excellent services/products to our customers. Our
+        mission is to provide the best experience for people traveling to
+        different destinations around the world. Our values include integrity,
+        innovation, customer satisfaction, and teamwork. We believe in putting
+        our customers first and working together to achieve our goals. Feel free
+        to explore our website to learn more about what we offer!
+      </p>
+    </section>
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p>
+        Feel free to contact us to know more about your conditions and for
+        treatment methods.
+      </p>
+      <form id="contactForm">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" onclick="thankyou()">Submit</button>
+      </form>
+    </section>
+
+    <div class="social-icons">
+      <a href="#"><img src="./twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="./facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="./insta.jpg" alt="Instagram" /></a>
+      <a href="#"><img src="./youtube.jpg" alt="YouTube" /></a>
+    </div>
+
+    <script src="./travel_recommendation.js"></script>
+  </body>
+</html>
